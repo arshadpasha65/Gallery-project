@@ -1,26 +1,21 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const gallery = document.getElementById("imageGallery");
+function openModal(imgElement) {
+    var modal = document.getElementById('modal');
+    var modalImg = document.getElementById('modal-img');
+    var downloadLink = document.getElementById('download');
+    
+    modal.style.display = 'block';
+    modalImg.src = imgElement.src;
+    downloadLink.href = imgElement.src;
+}
 
-    // Replace with your GitHub repository URL
-    const githubRepoUrl = "https://github.com/arshadpasha65/Gallery-project/tree/main/photos";
+function closeModal() {
+    var modal = document.getElementById('modal');
+    modal.style.display = 'none';
+}
 
-    fetch(githubRepoUrl)
-        .then(response => response.text())
-        .then(data => {
-            // Splitting the response data to get each image URL
-            const imageUrls = data.split("\n");
-
-            // Creating image elements and appending them to the gallery
-            imageUrls.forEach(url => {
-                if (url.trim() !== "") {
-                    const img = document.createElement("img");
-                    img.src = url.trim();
-                    img.alt = "Gallery Image";
-                    gallery.appendChild(img);
-                }
-            });
-        })
-        .catch(error => {
-            console.error("Error fetching images:", error);
-        });
-});
+window.onclick = function(event) {
+    var modal = document.getElementById('modal');
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}

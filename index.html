@@ -3,13 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery Website</title>
+    <title>Arshad Gallery</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="gallery" id="imageGallery">
-        <!-- Images will be dynamically added here -->
+    <nav>
+        <marquee>Welcome to Arshad Gallery</marquee>
+    </nav>
+    <div class="gallery">
+        <!-- JPG Image paths -->
+        <div class="image-container"><img src="photos/jpg/1.jpg" alt="Image 1" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/2.jpg" alt="Image 2" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/3.jpg" alt="Image 3" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/4.jpg" alt="Image 4" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/5.jpg" alt="Image 5" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/6.jpg" alt="Image 6" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/7.jpg" alt="Image 7" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/8.jpg" alt="Image 8" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/9.jpg" alt="Image 9" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/10.jpg" alt="Image 10" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/11.jpg" alt="Image 11" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/12.jpg" alt="Image 12" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/13.jpg" alt="Image 13" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/14.jpg" alt="Image 14" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/15.jpg" alt="Image 15" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/16.jpg" alt="Image 16" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/17.jpg" alt="Image 17" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/18.jpg" alt="Image 18" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/19.jpg" alt="Image 19" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/20.jpg" alt="Image 20" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/21.jpg" alt="Image 21" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/22.jpg" alt="Image 22" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/23.jpg" alt="Image 23" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/24.jpg" alt="Image 24" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/25.jpg" alt="Image 25" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/26.jpg" alt="Image 26" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/27.jpg" alt="Image 27" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/28.jpg" alt="Image 28" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/29.jpg" alt="Image 29" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/jpg/30.jpg" alt="Image 30" onclick="openModal(this)"></div>
+        
+        <!-- PNG Image paths -->
+        <div class="image-container"><img src="photos/png/1.png" alt="Image 31" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/png/2.png" alt="Image 32" onclick="openModal(this)"></div>
+        <div class="image-container"><img src="photos/png/3.png" alt="Image 33" onclick="openModal(this)"></div>
     </div>
+    
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+        <a id="download" href="#" download>&#8595;</a>
+    </div>
+
+    <footer>
+        &copy; All rights reserved by Arshad.
+    </footer>
 
     <script src="script.js"></script>
 </body>
